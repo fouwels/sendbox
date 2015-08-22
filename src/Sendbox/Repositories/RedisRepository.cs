@@ -18,8 +18,28 @@ namespace proj.Repositories
 		}
 		public Mailmodel GetMail(string key)
 		{
-			return JsonConvert.DeserializeObject<Models.Mailmodel>(redis.GetDatabase().StringGet(key));
-        }
+			RedisValue x;
+			try
+			{
+				x = redis.GetDatabase().StringGet(key);
+            }
+			catch (Exception)
+			{
+				return new Mailmodel
+				{
+					Text = "Could not connect to Redist" //hacky i kno
+				};
+			}
+			if (x.HasValue)
+			{
+				return JsonConvert.DeserializeObject<Models.Mailmodel>(x);
+			}
+			else
+			{
+				return null;
+			}
+
+		}
 		public async void PutMail(string key, Mailmodel mail)
 		{
 			await redis.GetDatabase().StringSetAsync(key, JsonConvert.SerializeObject(mail));

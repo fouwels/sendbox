@@ -1,0 +1,41 @@
+﻿@model proj.Models.Mailmodel
+<div class="row">
+	<form name="keyinput">
+		<input id="input" />
+		<input type="submit" value="Send" />
+	</form>
+</div>
+<div class="row">
+	<div id="Result" class="container">
+
+	</div>
+</div>
+
+
+
+@section Styles{
+	<link rel="Stylesheet" href="./css/Index.css" type="text/css" />
+}
+
+@section Scripts{
+	<script src="~/js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('form[name=keyinput]').submit(function (e) {
+				var dat = 'key=' + $("#input").val();
+				console.log(dat);
+				e.preventDefault();
+				$.ajax({
+					type: 'POST',
+					cache: false,
+					url: './Page/Index',
+					data: dat,
+					success: function (msg) {
+						console.log(msg.Text);
+						$("#Result").html(msg.Text);
+					}
+				});
+			});
+		});
+	</script>
+}

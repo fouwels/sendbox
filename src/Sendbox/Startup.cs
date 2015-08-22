@@ -62,18 +62,18 @@ namespace proj
 				await next();
 			});
 
-			app.Use(async (context, next) =>
-			{
-				var s = ("Headers:\n" + JsonConvert.SerializeObject(context.Request.Headers, Formatting.Indented));
-				logger.LogInformation(s);
-				Debug.WriteLine(s);
+			//app.Use(async (context, next) =>
+			//{
+			//	var s = ("Headers:\n" + JsonConvert.SerializeObject(context.Request.Headers, Formatting.Indented));
+			//	logger.LogInformation(s);
+			//	Debug.WriteLine(s);
 
-				s = ("Body:\n" + JsonConvert.SerializeObject(context.Request.Form, Formatting.Indented));
-				logger.LogInformation(s);
-				Debug.WriteLine(s);
+			//	s = ("Body:\n" + JsonConvert.SerializeObject(context.Request.Form, Formatting.Indented));
+			//	logger.LogInformation(s);
+			//	Debug.WriteLine(s);
 				
-				await next();
-			});
+			//	await next();
+			//});
 
 
 
