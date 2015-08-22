@@ -14,6 +14,7 @@ using Microsoft.Framework.Logging;
 using Microsoft.Framework.Logging.Console;
 using Microsoft.Framework.Runtime;
 using Newtonsoft.Json;
+using proj.Repositories;
 
 namespace proj
 {
@@ -43,6 +44,8 @@ namespace proj
 	        });
 
 			services.AddLogging();
+
+			services.AddScoped<RedisRepository>();
 
 			Debug.WriteLine("Configured Services - " + Configuration["Data:CheckVal"]); // indentify config mis match
         }

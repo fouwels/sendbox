@@ -12,7 +12,8 @@
 		"Microsoft.Framework.Configuration.Json": "1.0.0-beta6",
 		"Microsoft.Framework.Configuration.UserSecrets": "1.0.0-beta6",
 		"Microsoft.AspNet.StaticFiles": "1.0.0-beta6",
-		"Newtonsoft.Json": "7.0.1"
+		"Newtonsoft.Json": "7.0.1",
+		"StackExchange.Redis": "1.0.481"
 	},
 
 	"commands": {
@@ -39,8 +40,9 @@
 	"scripts": {
 		"postrestore": [
 			"npm install",
-			"bower install", 
-			"gulp build" ]
+			"bower install",
+			"gulp build"
+		]
 	}
 
 }
