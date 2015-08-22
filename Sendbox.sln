@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{448EA7B2-2EF6-4C13-B810-74F393D10051}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EDD468C3-6049-41F9-B08B-5C2DAF9672F5}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sendbox", "src\Sendbox\Sendbox.xproj", "{79435724-B28C-4EA9-A7A3-B0C344E74401}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79435724-B28C-4EA9-A7A3-B0C344E74401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79435724-B28C-4EA9-A7A3-B0C344E74401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79435724-B28C-4EA9-A7A3-B0C344E74401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79435724-B28C-4EA9-A7A3-B0C344E74401}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79435724-B28C-4EA9-A7A3-B0C344E74401} = {448EA7B2-2EF6-4C13-B810-74F393D10051}
+	EndGlobalSection
+EndGlobal
